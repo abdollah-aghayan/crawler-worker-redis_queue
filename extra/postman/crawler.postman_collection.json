@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "ff23f972-cb22-4671-89df-cc0dc51f570f",
+		"name": "crawler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "fetch url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"usr1\",\n\t\"urls\":[\n\t\t\"https://pkg.go.dev/github.com/gomodule/redigo/redis?tab=doc\",\n\t\t\"https://redis.io/commands/brpop\",\n\t\t\"http://google.com\",\n\t\t\"https://hackernoon.com/best-practices-for-event-driven-microservice-architecture-e034p21lk\"\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:6050/fetch",
+					"host": [
+						"localhost"
+					],
+					"port": "6050",
+					"path": [
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
